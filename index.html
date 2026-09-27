@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Thước Đo Online Trên Điện Thoại - Mama's Choice Việt Nam</title>
+  <meta name="description" content="Công cụ thước đo online giúp đo kích thước chân ti trực tiếp trên điện thoại để chọn size phễu hút sữa chính xác." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2"></path><path d="m11.5 9.5 2-2"></path><path d="m8.5 6.5 2-2"></path><path d="m17.5 15.5 2-2"></path></svg>
+      </div>
+      <div>
+        <h1>Thước Đo Chân Ti</h1>
+        <div id="device-pill" class="device-pill">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+          <span id="device-status">Đang nhận diện thiết bị</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="main-content">
+    <section id="tab-edge" class="tab tab-edge hidden" aria-label="Thước thẳng">
+      <div class="edge-ruler-shell">
+        <div id="edge-ruler-container" class="edge-ruler"></div>
+      </div>
+      <div class="edge-guide-card">
+        <h3>
+          <svg viewBox="0 0 24 24"><rect width="16" height="6" x="2" y="4" rx="2"></rect><rect width="9" height="6" x="9" y="14" rx="2"></rect><path d="M22 22V2"></path></svg>
+          Hướng dẫn cách đo
+        </h3>
+        <ol>
+          <li><b>1.</b><span>Áp sát cạnh trái của điện thoại tại <strong>chân núm ti</strong> (hoặc phần to nhất nếu đầu núm to hơn chân ti).</span></li>
+          <li><b>2.</b><span>Canh vạch số <strong>0</strong> ngay sát một bên mép của chân ti.</span></li>
+          <li><b>3.</b><span>Nhìn sang mép bên kia của chân ti đối chiếu với vạch thước để lấy số đo (mm).</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="tab-caliper" class="tab tab-caliper" aria-label="Thước đo">
+      <div class="result-panel">
+        <p class="result-label">Đường kính đo được</p>
+        <div class="result-number"><span id="caliper-distance">13.0</span><span class="unit">mm</span></div>
+        <div class="suggest-card">
+          <p>Gợi ý Size Phễu:</p>
+          <strong id="caliper-suggest">15mm - 17mm</strong>
+        </div>
+      </div>
+
+      <div id="caliper-bar-top" class="caliper-bar" style="top:250px">
+        <div class="caliper-line"></div>
+        <div class="drag-handle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20"></path><path d="m8 18 4 4 4-4"></path><path d="m8 6 4-4 4 4"></path></svg>
+        </div>
+      </div>
+
+      <div id="caliper-bar-bottom" class="caliper-bar" style="top:330px">
+        <div class="caliper-line"></div>
+        <div class="drag-handle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20"></path><path d="m8 18 4 4 4-4"></path><path d="m8 6 4-4 4 4"></path></svg>
+        </div>
+      </div>
+
+      <div id="caliper-overlay" class="caliper-overlay" style="top:250px;height:80px"></div>
+
+      <div class="drag-hint">
+        <div>
+          <svg viewBox="0 0 24 24"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+          <span>Kéo nút tròn lên/xuống để kẹp vào chân ti</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-guide" class="tab guide-page hidden" aria-label="Hướng dẫn">
+      <div class="guide-card">
+        <h2>
+          <svg viewBox="0 0 24 24"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"></path></svg>
+          Các bước đo chuẩn
+        </h2>
+        <div class="step-list">
+          <div class="step">
+            <div class="step-no">1</div>
+            <div>
+              <p class="step-title">Chuẩn bị dụng cụ</p>
+              <p>Dùng Thước đo Online trên điện thoại.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">2</div>
+            <div>
+              <p class="step-title">Cách đo</p>
+              <p>Áp sát màn hình tại <strong>chân núm ti</strong> (hoặc phần to nhất nếu đầu núm to hơn chân ti). Kéo kẹp đo vừa khít với chân núm ti, lưu ý KHÔNG đo quầng vú thâm xung quanh.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">3</div>
+            <div>
+              <p class="step-title">Cách tính size phễu</p>
+              <div class="formula"><strong>Size Phễu</strong> = Kích thước chân ti + <strong>(2 đến 3mm)</strong></div>
+              <p class="example">Ví dụ: Đo được 17mm thì nên chọn phễu size 19mm hoặc 21mm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="warning-card">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+        <p><strong>Lưu ý:</strong> Việc chọn sai size phễu có thể gây đau rát, nứt cổ gà và giảm lượng sữa. Kích thước 2 bên ngực có thể khác nhau, nên đo cả 2 bên.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Điều hướng">
+    <button id="nav-edge" class="nav-btn muted" type="button" data-tab="edge">
+      <span class="icon-bg"><svg viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2"></path><path d="m11.5 9.5 2-2"></path><path d="m8.5 6.5 2-2"></path><path d="m17.5 15.5 2-2"></path></svg></span>
+      <span class="nav-label">Thước thẳng</span>
+    </button>
+    <button id="nav-caliper" class="nav-btn active" type="button" data-tab="caliper">
+      <span class="icon-bg"><svg viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 17h16"></path><path d="M7 7v10"></path><path d="M17 7v10"></path></svg></span>
+      <span class="nav-label">Thước đo</span>
+    </button>
+    <button id="nav-guide" class="nav-btn muted" type="button" data-tab="guide">
+      <span class="icon-bg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span>
+      <span class="nav-label">Hướng dẫn</span>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
